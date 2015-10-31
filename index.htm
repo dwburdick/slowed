@@ -35,13 +35,20 @@
 		];
 		var selection;
 		$(function() {
+			var slide = function() {
+				selection = $("#slider").slider("value");
+				$("#sliderValue").text(selection);
+				$(".screenImg").attr("src", imgs[(selection-1)])
+				};
 			$("#slider").slider({
 				max: 25,
 				step: 1,
 				value: 24,
 				create: function(event, ui) {
-					selection = $("#slider").slider("value");
-					$("#sliderValue").text(selection);
+					slide();
+				},
+				change: function(event, ui) {
+					slide();
 				},
 				slide: function(event, ui) {
 					selection = $("#slider").slider("value");

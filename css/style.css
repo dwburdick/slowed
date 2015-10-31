@@ -1,0 +1,63 @@
+body {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	font-family: 'Georgia', serif;
+	font-size: 16px;
+}
+
+img,
+video,
+object,
+embed {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+.screensContainer {
+	width: 100%;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.screens {
+	max-width: 100%;
+	height: auto;
+	width: 100%;
+	margin: auto;
+}
+
+.sliderContainer {
+	width: 95%;
+	margin: auto;
+	padding-bottom: 15px;
+}
+
+.slider {
+	width: 100%;
+}
+
+div.ui-slider {
+	width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+	.screens {
+		width: Calc((100% - 10px)/2);
+	}
+}
+
+@media screen and (min-width: 890px) {
+	.screens {
+		width: Calc((100% - 15px)/3);
+	}
+}
